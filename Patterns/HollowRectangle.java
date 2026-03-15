@@ -1,3 +1,10 @@
+/*
+*****
+*___*
+*___*
+*___*
+*****
+*/
 import java.util.*;
 public class HollowRectangle{
     public static void print_hollow_rectangle(int rows,int cols){
