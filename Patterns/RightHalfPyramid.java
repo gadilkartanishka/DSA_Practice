@@ -26,5 +26,6 @@ public class RightHalfPyramid {
         System.out.print("Enter number of rows: ");
         int rows = sc.nextInt();
         print_half_pyramid(rows);
+        sc.close();
     }
 }

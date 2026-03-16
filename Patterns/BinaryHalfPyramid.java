@@ -24,5 +24,6 @@ public class BinaryHalfPyramid {
         System.out.print("Enter number of rows:");
         int rows=sc.nextInt();
         print_binary_half_pyramid(rows);
+        sc.close();
     }
 }

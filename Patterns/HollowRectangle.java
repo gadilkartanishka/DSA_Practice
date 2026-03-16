@@ -26,5 +26,6 @@ public class HollowRectangle{
         System.out.print("Enter number of cols:");
         int cols=sc.nextInt();
         print_hollow_rectangle(rows, cols);
+        sc.close();
     }
 }

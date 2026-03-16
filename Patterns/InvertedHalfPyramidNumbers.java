@@ -20,5 +20,6 @@ public class InvertedHalfPyramidNumbers {
         System.out.print("Enter max number:");
         int rows=sc.nextInt();
         print_inverted_pyramid_numbers(rows);
+        sc.close();
     }
 }
