@@ -18,7 +18,6 @@ This repository contains solutions to problems from LeetCode and other coding pl
 - `10_Dynamic_Programming/`
 - `Patterns/` -- reusable template skeletons per technique, not solved problems
 
-Each topic folder has its own README indexing the problems solved there.
 
 ## Progress
 
