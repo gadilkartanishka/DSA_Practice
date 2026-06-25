@@ -1,32 +1,36 @@
-// LeetCode 347 - Top K Frequent Elements
-// Time Complexity: O(n)
-// Space Complexity: O(n)
+// // LeetCode 347 - Top K Frequent Elements
+//OPTIMAL SOLUTION 
+//Time complexity: O(n)
+//Space complexity: O(n)
 import java.util.*;
 
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
-        
-        Map<Integer, Integer> count = new HashMap<>();
-        for (int num : nums) {
-            count.put(num, count.getOrDefault(num, 0) + 1);
+        HashMap<Integer,Integer> freqMap=new HashMap<>();
+        for(int num:nums){
+            freqMap.put(num,freqMap.getOrDefault(num,0)+1);
         }
-
-        PriorityQueue<Integer> heap = new PriorityQueue<>(
-            (a, b) -> count.get(a) - count.get(b)
-        );
-
-        for (int num : count.keySet()) {
-            heap.offer(num);
-            if (heap.size() > k) {
-                heap.poll(); 
+        List<Integer>[] bucket=new List[nums.length+1];
+        for(int num:freqMap.keySet()){
+            int freq=freqMap.get(num);
+            if(bucket[freq]==null){
+                bucket[freq]=new ArrayList<>();
+            }
+            bucket[freq].add(num);
+        }
+        int[] result=new int[k];
+        int idx=0;
+        for(int i=bucket.length-1;i>0 && idx<k;i--){
+            if(bucket[i]!=null){
+                for(int num:bucket[i]){
+                    result[idx]=num;
+                    idx++;
+                    if(idx==k){
+                        break;
+                    }
+                }
             }
         }
-        
-        int[] result = new int[k];
-        for (int i = k - 1; i >= 0; i--) {
-            result[i] = heap.poll();
-        }
-
         return result;
     }
 }
