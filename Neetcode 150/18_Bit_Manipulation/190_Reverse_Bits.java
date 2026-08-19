@@ -1,5 +1,5 @@
 //Leetcode 190- Reverse Bits
-//Time Complexity: O(n)
+//Time Complexity: O(1)
 //Space Complexity: O(1)
 class Solution {
     public int reverseBits(int n) {
