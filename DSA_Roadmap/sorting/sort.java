@@ -1,5 +1,3 @@
-//Time Complexity : O(N^2)
-//Space Complexity : O(N)
 class Solution {
     public int[] bubbleSort(int[] nums) {
         bubbleSortHelper(nums, nums.length);
