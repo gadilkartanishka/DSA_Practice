@@ -1,0 +1,17 @@
+//Time Complexity : O(N)
+//Space Complexity : O(1)
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int ptr=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                nums[ptr]=nums[i];
+                ptr++;
+            }
+        }
+        while(ptr<nums.length){
+            nums[ptr]=0;
+            ptr++;
+        }
+    }
+}
